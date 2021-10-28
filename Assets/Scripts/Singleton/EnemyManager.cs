@@ -8,11 +8,14 @@ public class EnemyManager : MonoBehaviour
 
     public int value;
 
+    public AudioSource backgroundMusic;
+
     private void Awake()
     {
         if(Instance == null)
         {
             Instance = this;
+            //backgroundMusic.Play();
             DontDestroyOnLoad(gameObject);
         }
         else
